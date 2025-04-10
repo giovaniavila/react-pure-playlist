@@ -1,13 +1,41 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import {Playlist} from "../components/Playlist"
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
-	<Playlist client:load/>
+	<section class="min-h-screen flex flex-col items-center justify-center px-4 text-center bg-gradient-to-br from-black to-gray-900">
+		<h1 class="text-5xl font-bold mb-4">
+		  <span class="text-yellow-400">PurePlaylist</span>
+		</h1>
+		<p class="text-xl text-gray-300 max-w-xl">
+		  Crie playlists incríveis baseadas nas suas músicas favoritas, com sugestões inteligentes.
+		</p>
+		<a href="/app" class="mt-8 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full transition">
+		  Comece agora
+		</a>
+	  </section>
+
+	  <section class="py-20 px-6 bg-gray-900">
+		<div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+		  <div>
+			<h2 class="text-2xl font-bold text-yellow-400 mb-2">Escolha sua música</h2>
+			<p class="text-gray-300">Selecione uma música que você ama e deixe o algoritmo trabalhar.</p>
+		  </div>
+		  <div>
+			<h2 class="text-2xl font-bold text-yellow-400 mb-2">Receba recomendações</h2>
+			<p class="text-gray-300">A plataforma gera playlists personalizadas baseadas no seu gosto.</p>
+		  </div>
+		  <div>
+			<h2 class="text-2xl font-bold text-yellow-400 mb-2">Curta offline</h2>
+			<p class="text-gray-300">Baixe ou salve localmente para ouvir quando quiser, sem internet.</p>
+		  </div>
+		</div>
+	  </section>
+
+	  <section class="bg-black py-16 text-center">
+		<h2 class="text-3xl font-bold text-white mb-4">Transforme sua forma de ouvir música</h2>
+		<a href="/app" class="inline-block bg-yellow-400 text-black font-medium px-8 py-3 rounded-full hover:bg-yellow-300">
+		  Criar minha playlist agora →
+		</a>
+	  </section>
 </Layout>
